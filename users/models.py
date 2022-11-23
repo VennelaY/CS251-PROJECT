@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
-from django.contrib.postgres.fields import ArrayField
 #from .managers import UserManager
 from .decorators import validate_file
 
