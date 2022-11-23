@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Assignments{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="col-12 col-sm-6 col-md-10">
+                    <strong><h3>Grade</h3></strong>
+        <hr/>
+            {% for foo in gradeassignment_submission %}
+
+
+                <p> <h4>MARKS</h4> {{ foo.marks }} </p>
+
+                
+                <hr/>
+                <p> <h4>Feedback</h4> {{ foo.feedback }}  </p>
+
+                <br/>
+                <hr/>
+            {% endfor %}
+
+
+
+
+            <br/>
+
+
+            <br/>
+
+
+        </div>
+{% endblock %}        
