@@ -78,4 +78,4 @@ the previous submission block will be modified  but no new block will be created
 #### View Grade 
 - He can click link to view manual grade if instructor submits his grade then he can view his marks and feedback given by instructor.
 ## Automatic Grade
-If instructor chooses to autograde(i.e submit valid autograder_script) then whenever student submits assignment he will automatically receives grade by running autograder script.he can click link view automatic grade to view his garde and feedback.
+- If instructor chooses to autograde(i.e submit valid autograder_script) then whenever student submits assignment he will automatically receives grade by running autograder script.he can click link view automatic grade to view his garde and feedback.
