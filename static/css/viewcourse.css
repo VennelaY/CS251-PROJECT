@@ -1,0 +1,131 @@
+ .head1{
+    font-size: 38px;
+    color:rgb(222, 51, 102);
+ }
+ .head2{
+    margin-left: 310px;
+    font-size: 38px;
+    color:rgb(222, 51, 102);
+ }
+ .topnav {
+    position: fixed;
+    width: 1770px;
+    margin-left: 0px;
+    margin-right: -100px;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    height: 70px;
+    width: 590px;
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    font-family: serif;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .topnav a:hover {
+    
+    background-color:  rgb(222, 51, 102);
+    color: black;
+  }
+
+  /* .topnav a.active {
+    
+    background-color:  rgb(222, 51, 102);
+    color: white;
+  } */
+  
+
+  .topnav .icon {
+    
+    display: none;
+  } 
+
+.container{
+    margin-left: 250px;
+}
+
+.sidebar {
+    position: fixed;
+    text-align: center;
+    margin-left: -270px;
+    padding: 0;
+    width: 300px;
+    background-color: #333;
+    height: 100%;
+    overflow: auto;
+    bottom:-70px;
+  }
+  
+  .sidebar a {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: serif;
+    text-align: center;
+    height: 70px;
+    display: block;
+    color: #f2f2f2;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  /* .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  } */
+  
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(222, 51, 102);
+    color: white;
+  }
+  
+  .container1{
+    width: 1000px; 
+    margin-left: 300px;
+  }
+  .container2{
+    width: 1000px; 
+    margin-left: 100px;
+  }
+  
+  hr {
+    clear: both;
+    color: rgb(9, 7, 7);
+    background-color:rgb(9, 7, 7);
+    height: 1px;
+    border-width: 0;
+  }
+  .button{
+    display: inline-block;
+    cursor: pointer;
+    font-family: serif;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color:rgb(222, 51, 102);
+    margin-left:230px;
+    border-radius: 12px;
+  }
+  button {
+    display: inline-block;
+    cursor: pointer;
+    font-family: serif;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 15px;
+    background-color:rgb(222, 51, 102);
+    margin-left:230px;
+    border-radius: 12px;
+  }

@@ -1,0 +1,839 @@
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    B = DSA.BSTNode(5)
+Expecting nothing
+ok
+Trying:
+    p = B.info
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    5
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    L=DSA.BSTNode(5)
+Expecting nothing
+ok
+Trying:
+    p= L.__str__()
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    5
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    BST = DSA.BinarySearchTree()
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    BST = DSA.BinarySearchTree()
+Expecting nothing
+ok
+Trying:
+    BST.insert(5)
+Expecting nothing
+ok
+Trying:
+    BST.insert(10)
+Expecting nothing
+ok
+Trying:
+    BST.insert(4)
+Expecting nothing
+ok
+Trying:
+    BST.insert(1)
+Expecting nothing
+ok
+Trying:
+    BST.insert(15)
+Expecting nothing
+ok
+Trying:
+    BST.height(BST.root)
+Expecting:
+    2
+ok
+Trying:
+    BST.height(BST.root.left)
+Expecting:
+    1
+ok
+Trying:
+    BST.height(BST.root.right)
+Expecting:
+    1
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    BST = DSA.BinarySearchTree()
+Expecting nothing
+ok
+Trying:
+    BST.insert(70)
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    BST = DSA.BinarySearchTree()
+Expecting nothing
+ok
+Trying:
+    BST.insert(5)
+Expecting nothing
+ok
+Trying:
+    BST.insert(10)
+Expecting nothing
+ok
+Trying:
+    BST.insert(4)
+Expecting nothing
+ok
+Trying:
+    BST.insert(1)
+Expecting nothing
+ok
+Trying:
+    BST.insert(15)
+Expecting nothing
+ok
+Trying:
+    BST.traverse("PRE")
+Expecting:
+    5 4 1 10 15 
+ok
+Trying:
+    BST.traverse("IN")
+Expecting:
+    1 4 5 10 15 
+ok
+Trying:
+    BST.traverse("POST")
+Expecting:
+    1 4 15 10 5 
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    DL = DSA.DoublyLinkedList()
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    DL = DSA.DoublyLinkedList()
+Expecting nothing
+ok
+Trying:
+    DL.insert(30)
+Expecting nothing
+ok
+Trying:
+    DL.insert(40)
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    DL = DSA.DoublyLinkedList()
+Expecting nothing
+ok
+Trying:
+    DL.insert(30)
+Expecting nothing
+ok
+Trying:
+    DL.insert(40)
+Expecting nothing
+ok
+Trying:
+    DL.insert(10)
+Expecting nothing
+ok
+Trying:
+    DL.printer(sep = ', ')
+Expecting:
+    [30, 40, 10]
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    DL = DSA.DoublyLinkedList()
+Expecting nothing
+ok
+Trying:
+    DL.insert(30)
+Expecting nothing
+ok
+Trying:
+    DL.insert(40)
+Expecting nothing
+ok
+Trying:
+    DL.insert(10)
+Expecting nothing
+ok
+Trying:
+    DL.reverse()
+Expecting nothing
+ok
+Trying:
+    DL.printer()
+Expecting:
+    [10, 40, 30]
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    DL = DSA.DoublyLinkedListNode(2)
+Expecting nothing
+ok
+Trying:
+    p = DL.data
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    2
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    L=DSA.DoublyLinkedListNode(2)
+Expecting nothing
+ok
+Trying:
+    p= L.__str__()
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    2
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(90)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.Heapify(0)
+Expecting nothing
+ok
+Trying:
+    heap.min()
+Expecting:
+    70
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    p = heap.M
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    40
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.insert(90)
+Expecting nothing
+ok
+Trying:
+    heap.insert(100)
+Expecting nothing
+ok
+Trying:
+    heap.Heapify(0)
+Expecting nothing
+ok
+Trying:
+    heap.deleteMin()
+Expecting nothing
+ok
+Trying:
+    heap.min()
+Expecting:
+    80
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.left(0)
+Expecting:
+    1
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.min()
+Expecting:
+    40
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.parent(1)
+Expecting:
+    0
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    heap = DSA.Heap(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(40)
+Expecting nothing
+ok
+Trying:
+    heap.insert(70)
+Expecting nothing
+ok
+Trying:
+    heap.insert(80)
+Expecting nothing
+ok
+Trying:
+    heap.right(0)
+Expecting:
+    2
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    SL.insert(30)
+Expecting nothing
+ok
+Trying:
+    SL.insert(40)
+Expecting nothing
+ok
+Trying:
+    SL.deleteVal(40)
+Expecting:
+    True
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    SL.insert(30)
+Expecting nothing
+ok
+Trying:
+    SL.insert(40)
+Expecting nothing
+ok
+Trying:
+    l=SL.find(40)
+Expecting nothing
+ok
+Trying:
+    p=l.data
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    30
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    SL.insert(30)
+Expecting nothing
+ok
+Trying:
+    SL.insert(40)
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    SL.insert(30)
+Expecting nothing
+ok
+Trying:
+    SL.insert(40)
+Expecting nothing
+ok
+Trying:
+    SL.insert(10)
+Expecting nothing
+ok
+Trying:
+    SL.printer()
+Expecting:
+    [30, 40, 10]
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    SL = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    SL.insert(30)
+Expecting nothing
+ok
+Trying:
+    SL.insert(40)
+Expecting nothing
+ok
+Trying:
+    SL.insert(10)
+Expecting nothing
+ok
+Trying:
+    SL.reverse()
+Expecting nothing
+ok
+Trying:
+    SL.printer()
+Expecting:
+    [10, 40, 30]
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    Node = DSA.SinglyLinkedListNode(5)
+Expecting nothing
+ok
+Trying:
+    x = Node.data
+Expecting nothing
+ok
+Trying:
+    print(x)
+Expecting:
+    5
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    L=DSA.SinglyLinkedListNode(2)
+Expecting nothing
+ok
+Trying:
+    p= L.__str__()
+Expecting nothing
+ok
+Trying:
+    print(p)
+Expecting:
+    2
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    T = DSA.Trie()
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    trie = DSA.Trie()
+Expecting nothing
+ok
+Trying:
+    trie.insert("cat")
+Expecting nothing
+ok
+Trying:
+    trie.insert("car")
+Expecting nothing
+ok
+Trying:
+    trie.insert("bat")
+Expecting nothing
+ok
+Trying:
+    trie.checkPrefix("ca")
+Expecting:
+    True
+ok
+Trying:
+    trie.checkPrefix("cap")
+Expecting:
+    False
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    trie = DSA.Trie()
+Expecting nothing
+ok
+Trying:
+    trie.insert("cat")
+Expecting nothing
+ok
+Trying:
+    trie.insert("car")
+Expecting nothing
+ok
+Trying:
+    trie.insert("bat")
+Expecting nothing
+ok
+Trying:
+    trie.countPrefix("ca")
+Expecting:
+    2
+ok
+Trying:
+    trie.countPrefix("ar")
+Expecting:
+    0
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    trie = DSA.Trie()
+Expecting nothing
+ok
+Trying:
+    trie.insert("cat")
+Expecting nothing
+ok
+Trying:
+    trie.insert("car")
+Expecting nothing
+ok
+Trying:
+    trie.insert("bat")
+Expecting nothing
+ok
+Trying:
+    trie.insert("cat")
+Expecting nothing
+ok
+Trying:
+    trie.find(trie.T,'c')
+Expecting:
+    True
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    trie = DSA.Trie()
+Expecting nothing
+ok
+Trying:
+    trie.insert("cat")
+Expecting nothing
+ok
+Trying:
+    trie.insert("car")
+Expecting nothing
+ok
+Trying:
+    trie.insert("bat")
+Expecting nothing
+ok
+Trying:
+    import DSA
+Expecting nothing
+ok
+Trying:
+    L1 = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    L1.insert(30)
+Expecting nothing
+ok
+Trying:
+    L1.insert(40)
+Expecting nothing
+ok
+Trying:
+    L1.insert(10)
+Expecting nothing
+ok
+Trying:
+    L2 = DSA.SinglyLinkedList()
+Expecting nothing
+ok
+Trying:
+    L2.insert(70)
+Expecting nothing
+ok
+Trying:
+    L2.insert(5)
+Expecting nothing
+ok
+Trying:
+    L2.insert(20)
+Expecting nothing
+ok
+Trying:
+    L3=DSA.merge(L1,L2)
+Expecting nothing
+ok
+Trying:
+    L3.printer()
+Expecting:
+    [30, 40, 10, 70, 5, 20]
+ok
+9 items had no tests:
+    DSA
+    DSA.BSTNode
+    DSA.BinarySearchTree
+    DSA.DoublyLinkedList
+    DSA.DoublyLinkedListNode
+    DSA.Heap
+    DSA.SinglyLinkedList
+    DSA.SinglyLinkedListNode
+    DSA.Trie
+34 items passed all tests:
+   4 tests in DSA.BSTNode.__init__
+   4 tests in DSA.BSTNode.__str__
+   2 tests in DSA.BinarySearchTree.__init__
+  10 tests in DSA.BinarySearchTree.height
+   3 tests in DSA.BinarySearchTree.insert
+  10 tests in DSA.BinarySearchTree.traverse
+   2 tests in DSA.DoublyLinkedList.__init__
+   4 tests in DSA.DoublyLinkedList.insert
+   6 tests in DSA.DoublyLinkedList.printer
+   7 tests in DSA.DoublyLinkedList.reverse
+   4 tests in DSA.DoublyLinkedListNode.__init__
+   4 tests in DSA.DoublyLinkedListNode.__str__
+   7 tests in DSA.Heap.Heapify
+   4 tests in DSA.Heap.__init__
+   9 tests in DSA.Heap.deleteMin
+   5 tests in DSA.Heap.insert
+   6 tests in DSA.Heap.left
+   6 tests in DSA.Heap.min
+   6 tests in DSA.Heap.parent
+   6 tests in DSA.Heap.right
+   2 tests in DSA.SinglyLinkedList.__init__
+   5 tests in DSA.SinglyLinkedList.deleteVal
+   7 tests in DSA.SinglyLinkedList.find
+   4 tests in DSA.SinglyLinkedList.insert
+   6 tests in DSA.SinglyLinkedList.printer
+   7 tests in DSA.SinglyLinkedList.reverse
+   4 tests in DSA.SinglyLinkedListNode.__init__
+   4 tests in DSA.SinglyLinkedListNode.__str__
+   2 tests in DSA.Trie.__init__
+   7 tests in DSA.Trie.checkPrefix
+   7 tests in DSA.Trie.countPrefix
+   7 tests in DSA.Trie.find
+   5 tests in DSA.Trie.insert
+  11 tests in DSA.merge
+187 tests in 43 items.
+187 passed and 0 failed.
+Test passed.
+[2]
+[2 1]
+[1, 2]
+[1, 2, 2]
+[2]
+[2 1]
+[1, 2]
+1 items had no tests:
+    tester
+0 tests in 1 items.
+0 passed and 0 failed.
+Test passed.

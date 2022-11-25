@@ -1,0 +1,27 @@
+{% load static %}
+{% if user.is_authenticated %}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'css/instructor.css'%}">
+    <div class="alert alert-success" role="alert">
+        
+         <div class="sidebar">
+        <a class="active" href="{% url 'users:password_change' %}">Change Password</a>
+        <a href="{% url 'users:profile-update' %}">Edit Profile</a>
+        <a href="{% url 'users:logout' %}">Logout</a>
+      </div>
+        
+        <div class="box">
+        <h1>Welcome {{ user.username }}!</h1>
+        <h2>  This is an instructor page</h2>
+        <a href="{% url 'users:course' %}">View Created Courses</a><br>
+        <a href="{% url 'users:course-create' %}">Create course</a><br>
+        
+        </div>
+    </div>
+{% else %}
+    <div style="text-align: center;" class="alert alert-success" role="alert">
+        <h3 style="text-align: center;">WELCOME!!</h3>
+        <a href="{% url 'users:signup' %}">Signup</a>
+        <a href="{% url 'users:login' %}">Login</a>
+    </div>
+{% endif %}

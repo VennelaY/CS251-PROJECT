@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Assignments{% endblock %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'css/viewcourse.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+            {% if request.user.is_authenticated and request.user.role == 'instructor' %}
+            <div class="topnav" id="myTopnav">
+                <a href="{%url 'users:instructor'%}" class="active">Home</a>
+                <a href="{% url 'users:course' %}">View Courses</a>
+                <a href="{% url 'users:logout' %}">Logout</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+                </div>       
+                
+                <div class="sidebar">
+                
+                        <a class="active" href="{% url 'users:assignment-list' course.id %}">{{request.user.first_name}}  {{request.user.last_name }}</a>
+                        <a class="active"href="{% url 'users:assignment-list' course.id %}">{{request.user.username}}</a>
+                        <a href="{% url 'users:course-view' course.id %}">Back To Course</a>
+                      </div>
+                    <br>
+                    <br><br><br>
+                    <strong><h1 class="head2">Assignments</h1></strong>
+                
+                    <div class="container1">
+                        
+                        <div class="col-12 col-sm-6 col-md-10">
+
+
+
+                {% for foo in assignment %}
+                
+                    <hr/><div class="container2">
+                    <h3><strong> {{ foo.assignment_name }}  </strong><a href="{% url 'users:assignment-submission-list' foo.id %}" class="button">Assignment Submissions</a></h3>
+                    
+                    <h3> Question Content :</h3> <h4>{{ foo.question_content }} </h4>
+                 
+                    <h3> Problem Statement Link :<a href = "/users/media/{{ foo.related_file }}"> Here </a> </h3>
+                   
+                    <h3> Maximum Marks : {{ foo.assignment_marks }} </h3>    
+                    <h3> Deadline:</h3><h4> {{ foo.deadline }} </h4>
+                    <h3> Valid extensions of submission file :</h3> <h4>{{ foo.extensions }} </h4>    
+                    <h3> File directory structure text file :<a href = "/users/media/{{ foo.file_directory_structure_textfile }}"> Here </a> </h3>    
+                    <h3> Autograder script file :<a href = "/users/media/{{ foo.autograde_script_zipfile }}"> Here </a> </h3>
+                </div>    <hr/>
+                
+                    
+                    <br>
+
+                {% endfor %}
+          
+
+                
+
+
+        
+
+            {% else %}
+
+            <div class="topnav" id="myTopnav">
+                <a href="{%url 'users:student'%}" class="active">Home</a>
+                <a href="{% url 'users:course' %}">View Courses</a>
+                <a href="{% url 'users:logout' %}">Logout</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+                </div>       
+                
+                <div class="sidebar">
+                
+                        <a class="active" href="{% url 'users:assignment-list' course.id %}">{{request.user.first_name}}  {{request.user.last_name }}</a>
+                        <a class="active"href="{% url 'users:assignment-list' course.id %}">{{request.user.username}}</a>
+                        <a href="{% url 'users:course-view' course.id %}">Back To Course</a>
+                      </div>
+                    <br><br><br><br><br><br>
+                    <strong><h1 class="head2">Assignments</h1></strong>
+
+
+                    <div class="container1">
+                        
+                        <div class="col-12 col-sm-6 col-md-10">
+
+                {% for foo in assignment %}
+                    <hr/><div class="container2">
+                    <h3><strong> {{ foo.assignment_name }}  </strong></h3>                  
+                    <h3>Question Content :</h3> <h4>{{ foo.question_content }} </h4>
+                    <h3>Question File :<a href = "/users/media/{{ foo.related_file }}"> link</a>  </h3>   
+                    <h3> Problem Statement Link:<a href = "/users/media/{{ foo.related_file }}"> Here </a> </h3>
+                    <h3> Maximum Marks: {{ foo.assignment_marks }} </h3>    
+                    <h3> Deadline: <small> {{ foo.deadline }} </small></h3>
+                    <h3> Valid extensions of submission file: {{ foo.extensions }}</h3>    
+                    <h3> File directory structure text file:<a href = "/users/media/{{ foo.file_directory_structure_textfile }}"> Here </a> </h3>    
+                          <br>
+                                            
+                      <br>
+                      
+                    <script>
+                    var x=0;
+                    var datetime = new Date(); 
+                    console.log(datetime);
+                    document.getElementById("time").textContent = datetime;
+                    var time = new Date();
+                    var date = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate(); 
+                    </script> 
+                      <p>{{date}}</p>       
+                      {% if date > foo.deadline %}
+                             <p>Deadline completed</p>
+                      {% endif %}
+                      {% for foo1 in assignment_submission %}
+                        {% if foo1.user.username == request.user.username and foo1.no == foo.id %}
+                            <h4> Assignment Submitted </h4>
+                            <div class="btn-group">
+                                <button id="1"> <a href="{% url 'users:assignment-submission-list' foo.id %}" >View Submission</a></button>
+                           
+                                <button id='2'> <a href="{% url 'users:reassignment_submission' foo.id %}">Resubmit Assignment</a></button>
+                         
+                                <button id="3"><a href="{% url 'users:autograde-view' foo1.id %}">Automatic Grade</a></button>
+                                <button id="4"><a href="{% url 'users:gradeassignment-submission-list' foo.id %}">Manual Grade</a></button>
+                        </div>
+                            {% endif %}
+                      
+                    {% endfor %}
+                        
+                         
+                          
+                          
+                          <h4><a href="{% url 'users:assignment_submission' foo.id %}">Submit Assignment</a></h4>
+                        
+                        </div>    <hr/> 
+                {% endfor %}
+
+            {% endif %}
+            <br/>
+        </div>
+
+    </div>
+
+{% endblock %}
