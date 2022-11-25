@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Courses{% endblock %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'css/courses.css'%}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+{% if request.user.is_authenticated and request.user.role == 'instructor' %}
+<div class="topnav" id="myTopnav">
+  <a href="{%url 'users:instructor'%}">Home</a>
+  <a href="{% url 'users:course' %}"  class="active">{{request.user.first_name}}  {{request.user.last_name }}</a>
+  <a href="{% url 'users:logout' %}">Logout</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+   
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- Section Heading -->
+        <br>
+        <br>
+          <div class="col-12">
+          <div class="section-heading text-center">
+
+             
+            <h2> Courses</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br> 
+      <div class="row">
+          {% for course in course %}
+         {% if request.user.first_name == course.teacher_name %} 
+        <!-- Single Dentist Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="single-dentist-area mb-100">
+            <img  style="height: 300px; width: 350px " src="{{ course.course_image.url }}" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                  <h4>{{ course.course_name }} |  <a href="{% url 'users:course-view' course.id %}"> VIEW COURSE</a> </h4>
+                <h4>{{ course.teacher_name }} </h4>
+                <h4>Course Code: {{ course.course_code }} </h4>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+       {% endif %} 
+      {% endfor %}
+
+      </div>
+    </div>
+    
+{% endif %}
+
+
+{% if request.user.is_authenticated and request.user.role == 'student' %}
+<div class="topnav" id="myTopnav">
+  <a href="{%url 'users:student'%}" >Home</a>
+  <a href="{% url 'users:course' %}">{{request.user.first_name}}  {{request.user.last_name }}</a>
+  <a href="{% url 'users:logout' %}">Logout</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+    <div class="container">
+
+
+      <div class="row">
+
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+
+            <br>
+            <h2>Courses</h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          {% for course in request.user.courses.all %}
+        <!-- Single Dentist Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="single-dentist-area mb-100">
+            <img  style="height: 300px; width: 350px " src="{{ course.course_image.url }}" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                  <h4>{{ course.course_name }} |  <a href="{% url 'users:course-view' course.id %}">VIEW COURSE</a> </h4>
+                <h4>{{ course.teacher_name }} </h4>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+{% endif %}
+{% endblock %}

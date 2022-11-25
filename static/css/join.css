@@ -1,0 +1,35 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: #131212e5;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    top:0;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: rgb(216, 212, 212);
+    font-family: serif;
+    font-size: 30px;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover{
+    background-color: rgb(243, 74, 82);
+    color: rgb(126, 231, 235);
+  }
+h2 {
+
+    text-align: center;
+    
+    }
+.center {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }

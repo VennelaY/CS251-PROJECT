@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/join.css'%}">
+<div class="sidebar">
+    <a class="active" href="{% url 'users:course' %}">View Course</a>
+    <a href="{% url 'users:join_course' %}">Join Course</a>
+    <a href="{% url 'users:available_course' %}">Available Course</a>
+    <a href="{% url 'users:student' %}">HOME PAGE</a>
+</div>
+<br><br><br><br>
+<h2>JOIN COURSE</h2>
+<br>
+<div class="center">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>{{ field.label }}: <br> {{ field }}</p>
+        {% endfor %}
+        <input type="submit"  value="JOIN">
+    </form>
+</div>
